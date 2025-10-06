@@ -1,0 +1,30 @@
+{
+  "name": "oxc-linting-git-directories-reproduction",
+  "version": "0.0.0",
+  "description": "Minimal reproduction for https://github.com/oxc-project/oxc/issues/13315",
+  "homepage": "https://github.com/manovotny/oxc-linting-git-directories-reproduction#readme",
+  "bugs": {
+    "url": "https://github.com/manovotny/oxc-linting-git-directories-reproduction/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manovotny/oxc-linting-git-directories-reproduction.git"
+  },
+  "license": "MIT",
+  "author": "Michael Novotny <manovotny@gmail.com> (https://manovotny.com/)",
+  "type": "module",
+  "main": "index.js",
+  "git": {
+    "pre-commit": "lint"
+  },
+  "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "start": "node index.js",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "@vercel/git-hooks": "^1.0.0",
+    "oxlint": "^1.19.0"
+  }
+}
